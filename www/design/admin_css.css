@@ -80,28 +80,40 @@
 }
 
 
-.dataTable .odd{
-	background-color: #202020 !important;
-}
+
+
 
 .dataTable .even{
-	background-color: #000000 !important;
+	/* background-color: #000000 !important; */
+	background-color: #242424 !important;
+
 	/* background-color: #dadada !important; */
 
 }
 
-.dataTable .odd .sorting_1{
-	background-color: #343434 !important;
+.dataTable .odd{
+	/* background-color: #202020 !important; */
+	background-color: #313131 !important;
 }
 
 .dataTable .even .sorting_1{
-	background-color: #242424 !important;
+	/* background-color: #242424 !important; */
+	background-color: #3f3f3f !important;
+}
+
+.dataTable .odd .sorting_1{
+	/* background-color: #343434 !important; */
+	background-color: #4c4c4c !important;
 }
 
 .dataTable tbody tr:hover{
-	background-color: #3e3e3e !important;
+	/* background-color: #3e3e3e !important; */
+	background-color: #595959 !important;
 	/* cursor: pointer; */
 }
+
+
+
 
 .dataTable .i_toolbaradmin{
 	display:none;
