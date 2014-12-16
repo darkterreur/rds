@@ -1,0 +1,452 @@
+/*	CSS Spécifique a l'interface client	*/
+
+#header {
+	padding: 11px 0 0;
+	position: relative;
+	z-index: 5;
+}
+
+.nav_wrapper{
+	margin-left: -39px;
+}
+
+#nav {
+	margin: 0;
+	font-size: 13px;
+	line-height: 35px;
+	text-transform: uppercase;
+	width: 990px;
+	position: relative;
+}
+
+#nav li{
+	width: 24.84%;
+	float: left;
+	margin: 0 0 0 -1px;
+	padding: 0 0 2px;
+	list-style: none;
+	/* background-color: #38383A; */
+	
+	background: -webkit-linear-gradient(rgba(57,57,58,1) 0%, rgba(3,3,5,1) 100%);
+	background: 	 -o-linear-gradient(rgba(57,57,58,1) 0%, rgba(3,3,5,1) 100%);
+	background: -moz-linear-gradient(rgba(57,57,58,1) 0%, rgba(3,3,5,1) 100%);
+	background: 		linear-gradient(rgba(57,57,58,1) 0%, rgba(3,3,5,1) 100%);
+	
+		/* border-color: -webkit-linear-gradient(left,rgba(80,80,80,1) 0%, rgba(183,183,185,1) 100%); */	
+}
+
+#nav a strong {
+	font-weight: normal;
+}
+
+#nav li:hover{
+	cursor:pointer;
+	
+	
+	background: -webkit-linear-gradient(rgba(109,109,110,1) 0%, rgba(69,68,69,1) 100%);
+	background: 	 -o-linear-gradient(rgba(109,109,110,1) 0%, rgba(69,68,69,1) 100%);
+	background: -moz-linear-gradient(rgba(109,109,110,1) 0%, rgba(69,68,69,1) 100%);
+	background: 		linear-gradient(rgba(109,109,110,1) 0%, rgba(69,68,69,1) 100%);
+	
+
+}
+
+#nav li a {
+	color: #fff;
+	display: block;
+	text-align: center;
+	/* width: 246px; */
+	
+}
+
+#nav li a:hover{
+	color:rgba(201,87,172,1);
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+	min-height: 14px;
+}
+
+li{
+	border: 1px solid rgba(162,162,164,1);
+}
+
+
+.logo {
+	background: url('../images/logo2.jpg') no-repeat;
+	width: 150px; /* ce serai mieux en 94 px redimensionnser image*/
+	height: 150px; /* ce serai mieux en 71 px redimensionnser image*/
+	text-indent: -9999px;
+	overflow: hidden;
+	margin: 0 auto;
+	display: block;
+	float: left;
+}
+
+.baniere {
+	background: url('../images/banniere1.jpg') no-repeat;
+	width: 840px;
+	height: 150px; /* ce serai mieux en 71 px redimensionnser image*/
+	text-indent: -9999px;
+	overflow: hidden;
+	margin: 0 auto;
+	display: block;
+}
+
+.banLog {
+	background: url('../images/en_tete_rs.jpg') no-repeat;
+	/* background: url('../images/en_tete_rs.jpg') no-repeat; */
+	width: 988px;
+	height: 100px;/* ce serai mieux en 71 px redimensionnser image*/
+	text-indent: -9999px;
+	overflow: hidden;
+	margin: 0 auto;
+	display: block;
+}
+
+.container {
+	padding: 8px 0 10px;
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+	z-index: 1;
+}
+
+#block_center {
+	padding: 15px;
+	padding-top: 0px;
+	overflow: hidden;
+	float: left;
+	width: 704px; /* 700 pour l'exemple mais remettre 708*/
+	position: relative;
+	min-height: 230px;
+	height: auto;
+	/* background-color: #38383A; */
+	
+	background: -webkit-linear-gradient(rgba(57,57,58,1) 0%, rgba(3,3,5,1) 100%); 
+	background: -o-linear-gradient(rgba(57,57,58,1) 0%, rgba(3,3,5,1) 100%);
+	background: -moz-linear-gradient(rgba(57,57,58,1) 0%, rgba(3,3,5,1) 100%);
+	background: linear-gradient(rgba(57,57,58,1) 0%, rgba(3,3,5,1) 100%);
+	
+
+
+	/* border: 1px solid; */ /* pour l'exepmle on désactive*/
+	border: 1px solid rgba(162,162,164,1);
+
+}
+
+#block_right {
+	
+	margin-right: 1px;
+	float: right;
+	width: 241px;
+	overflow: hidden;
+	/* min-height: 230px; */
+	height: auto;
+	/* background-color: #38383A; */
+	/*
+background: -webkit-linear-gradient(rgba(57,57,58,1) 0%, rgba(3,3,5,1) 100%);
+	border: 1px solid rgba(162,162,164,1);
+*/
+	/* margin-right: 3px; */
+}
+
+#first_right{
+	padding: 10px;
+	height: 209px;
+	
+	background: -webkit-linear-gradient(rgba(57,57,58,1) 0%, rgba(3,3,5,1) 100%);
+	background: -o-linear-gradient(rgba(57,57,58,1) 0%, rgba(3,3,5,1) 100%);
+	background: -moz-linear-gradient(rgba(57,57,58,1) 0%, rgba(3,3,5,1) 100%);
+	background: linear-gradient(rgba(57,57,58,1) 0%, rgba(3,3,5,1) 100%);
+	
+	
+	border: 1px solid rgba(162,162,164,1);
+
+}
+
+
+#second_right{
+	margin-top: 8px;
+	height: auto;
+
+	
+	
+	
+	
+	padding: 10px;
+	height: 209px;
+	
+	background: -webkit-linear-gradient(rgba(57,57,58,1) 0%, rgba(3,3,5,1) 100%);
+	background: -o-linear-gradient(rgba(57,57,58,1) 0%, rgba(3,3,5,1) 100%);
+	background: -moz-linear-gradient(rgba(57,57,58,1) 0%, rgba(3,3,5,1) 100%);
+	background: linear-gradient(rgba(57,57,58,1) 0%, rgba(3,3,5,1) 100%);
+	
+	
+	border: 1px solid rgba(162,162,164,1);
+}
+
+h3{
+	text-decoration:underline;
+	margin-top: 0px;
+	text-align: center;
+}
+
+.titre{
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#footer{
+	height: 24px;
+	/* padding: 4px 0 0; */
+	bottom: 0;
+	position: fixed;
+	z-index: 999;
+	margin: 0 auto;
+	/* width: 69.27%; */
+	width: 990px;
+	/* margin-bottom: 10px; */
+	background-color: #171717;
+	margin-left: 1px;
+}
+#footer p{
+	text-align: center;
+}
+#footer li{
+	float: left;
+	margin: 0 0 0 -1px;
+	/* padding: 0 0 2px; */
+	list-style: none;
+	/* background-color: #38383A; */
+	/* border: 1px solid #C0C0C2; */
+}
+#footer li :hover{
+	cursor:pointer;
+	background: -webkit-linear-gradient(rgba(109,109,110,1) 0%, rgba(69,68,69,1) 100%);
+	background: -o-linear-gradient(rgba(109,109,110,1) 0%, rgba(69,68,69,1) 100%);
+	background: -moz-linear-gradient(rgba(109,109,110,1) 0%, rgba(69,68,69,1) 100%);
+	background: linear-gradient(rgba(109,109,110,1) 0%, rgba(69,68,69,1) 100%);
+	
+	/* background-color: #6D6C6D; */
+}
+.footGene a {
+	color: #fff;
+	display: block;
+	text-align: center;
+	/* width: 112px; */
+	font-size: 9px;
+	padding-top: 6px;
+	padding-bottom: 2px;
+}
+
+#footer li .compteur {
+	cursor: default;
+	color: #fff;
+	display: block;
+	text-align: center;
+	/* width: 190px; */
+	font-size: 9px;
+	padding-top: 6px;
+	height: 16px;
+}
+
+#footer li .vide {
+	cursor: default;
+	color: #fff;
+	display: block;
+	text-align: center;
+	/* width: 57px; */
+	font-size: 11px;
+	padding-top: 6px;
+	height: 16px;
+}
+
+.li_vide{
+	width: 3.9%;
+}
+
+.li_social{
+	width: 4%;
+	padding-bottom: 2px;	
+}
+
+.fa_social{
+	width: 40px;
+	color: #fff;
+	display: block;
+	text-align: center;
+	/* width: 132px; */
+	/* font-size: 11px; */
+	padding-top: 1px;
+	margin-bottom: -1px;
+}
+
+/*
+.fa-facebook-square{
+	background: -webkit-linear-gradient(rgba(0, 0, 0, 1) 100%, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%);
+	color: #2300fd;
+}
+*/
+
+
+
+.S20{
+	font-size: 20px; 
+}
+
+#footer ul{
+	margin: 0px;
+	padding: 0px;
+}
+
+
+
+.i_toolbar i{
+	cursor: pointer;
+	color: silver;
+	padding: 2px 3px;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	width: 20px !important;
+	height: 20px !important;
+}
+
+.i_hover:hover{
+	cursor:pointer;
+	color:rgba(140,194,255,0.9);
+
+}
+
+
+.label{
+	width: 29%;
+	float: left;
+	height: 19px;
+	margin-top: 2px;
+	/* margin-bottom: 20px; */
+}
+
+.input{
+	width: 70%;
+	float: left;
+	margin-bottom: 15px;
+}
+
+input{
+	width: 51%;
+}
+
+button.btn_cont{
+	margin-left: 210px;
+	margin-top: 20px;
+}
+
+button:hover{
+	cursor:pointer;	
+}
+
+.error_input{
+	display: none;
+	background-color: transparent;
+	border: none;
+	color: red;
+	padding-left: 10px;
+	width: 30%;
+}
+
+.error_textarea{
+	width: 100px;
+	margin-left: 4px;
+	float: left;
+	display: none;
+	background-color: transparent;
+	border: none;
+	color: red;
+	padding-left: 10px;
+}
+
+.image{
+	border: 1px solid rgba(162,162,164,1);
+	width: 210px;
+	height: 297px;
+	float: left;
+	margin-right: 15px;
+	margin-bottom: 10px;
+}
+
+.cont_img{
+	border: 1px solid rgba(162,162,164,1);
+	width: 70px;
+	height: 227px;
+	float: left;
+	margin-right: 15px;
+	margin-top: -10px!important;
+	margin-left: -10px!important;
+}
+
+h2{
+	text-align: center;
+}
+
+#telephone{
+	display: none;
+}
+
+.bloc_form_livr{
+	border: 1px solid silver;
+	margin-top: 2%;
+	padding: 2%;
+	height: 150px;
+}
+
+.bloc_elem_comm{
+	border: 1px solid silver;
+	margin-top: 2%;
+	padding: 3%;
+	background: rgba(58,58,58,1);
+	position: relative;			
+	/* height: 140px; */
+}
+
+
+button.btn_livr{
+	border-radius: 12px;
+	background-color: white;
+	border-style: outset;
+	border-color: silver;
+}
+
+.mess_livr{
+	border: 1px solid silver;
+	margin-top: 1.5%;
+	padding: 2%;
+	background: rgba(79,79,79,1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

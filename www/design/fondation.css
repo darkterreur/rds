@@ -1,0 +1,21 @@
+/*	CSS des element de base du site pour avoir les element bien centré et pouvoir faire du responsive	*/
+
+
+#wrapper {
+	min-height: 100%;
+}
+
+body {
+	color: #fff;
+	font: 13px Arial,Verdana, sans-serif;
+	background-color: #000000;
+	/* background-image: url("../images/1793679.jpg"); */
+	
+}
+
+
+.under_wrapper {
+	margin: 0 auto 25px;
+	width: 990px;
+	padding: 0 0 5px;
+}
