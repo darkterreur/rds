@@ -40,6 +40,7 @@
 		case 'valid':
 			$html = valid_livre($_POST['elem'],$_POST['id']);	
 			break;
+			
 						
 		default:
 			$html = get_login();
