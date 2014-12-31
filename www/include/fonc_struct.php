@@ -44,6 +44,8 @@
 				<script type="text/javascript" src="./_js/dataTables/jquery.dataTables.js"></script>
 				<script type="text/javascript" src="./_js/_js.js"></script>
 				<script type="text/javascript" src="./_js/_js_admin.js"></script>
+				<script type="text/javascript" src="./_js/jquery.validate.js"></script>
+				
 				
 				';
 				
@@ -94,7 +96,7 @@
 		return $html;
 	}
 
-	function get_container(){
+	function  get_container(){
 		$html ='';
 	
 		$html .= '	<div class="container">
