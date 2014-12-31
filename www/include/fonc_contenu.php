@@ -6,7 +6,7 @@
 	function get_accueil(){
 		$html = '';
 		
-		$html .= '	<div id="texte">
+		$html .= '	<div id="acceuil">
 						<p><i>L’apaisement réside en chacun de nous… Dalaï Lama.</i></p>
 						<HR>
 						<br>
@@ -59,7 +59,7 @@
 	function get_bien_etre(){
 		$html = '';
 		
-		$html .= '	<div id="texte">
+		$html .= '	<div id="bien_etre">
 						<p><i>Nos mains existent pour que notre âme ne reste pas silencieuse… Proverbe Tibétain</i></p> 
 						<HR>
 						<br>
@@ -188,7 +188,7 @@
 	function get_coaching(){
 		$html = '';
 		
-		$html .= '	<div id="texte">
+		$html .= '	<div id="coaching">
 						<p><i>Parce que pour se sentir bien dans sa tête, il faut se sentir bien dans sa peau…</i></p>
 						<HR>
 						<br>
@@ -248,7 +248,7 @@
 	function get_dev_perso(){
 		$html = '';
 		
-		$html .= '	<div id="texte">
+		$html .= '	<div id="developpement">
 						<p><i>Le bonheur ne vient pas automatiquement. Il dépend de vos propres actions. Dalaï Lama.</i></p> 
 						<HR>
 						<br>
