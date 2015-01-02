@@ -522,10 +522,26 @@ $.validator.setDefaults({
 	function createClientTypeForm()
 	{
 	?>
+		<style>
+			.sbt 
+		{
+			clear: both !important; 
+			float: none !important;
+			padding: .9em 1em !important;
+			width: auto !important;
+			margin-bottom: 2% !important;
+			margin-left: 81% !important;
+		}
+		</style>
 		<div class="createClientTypeForm">		
-			<label style="font-size: 20px;font-weight: bold;">Veuillez ajouter ci-dessous le libélé du nouveau grade utilisateur</label>
-			<form method="POST" id="createClientTypeForm" name="createClientTypeForm" style="padding-top:25px">
+			<label style="font-size: 20px;font-weight: bold;">Veuillez ajouter ci-dessous le libélé du nouveau type de client</label>
+			<form action="" method="POST" id="createClientTypeForm" name="createClientTypeForm" style="padding-top:25px">
 				<label for="createClientTypeForm_label">Libellé : </label>			<input id="createClientTypeForm_label" name="createClientTypeForm.label" type="text">
+				<input type="submit" class="sbt button" value="Valider" id="form_bt_val">
+				<script>$('#form_bt_val').click( function() { 
+								validElement(elem, id);
+							});
+				</script>
 			</form>
 		</div>
 	
