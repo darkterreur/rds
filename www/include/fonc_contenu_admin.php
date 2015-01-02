@@ -425,8 +425,13 @@
 			<label for="FormData_AddrComplement">            Compl&#233;ment d&#39;adresse :<span class="tip">(digicode, etc.)</span></label>		<input class="" id="FormData_AddrComplement" name="FormData.AddrComplement" type="text" value="" /> 
 			<label for="FormData_PostalCode"><abbr class="rq" title="Obligatoire">*</abbr>            Code postal : <span class="tip">(ex. 33600)</span></label>		<input class="" id="FormData_PostalCode" name="FormData.PostalCode" type="text" value="" />
 			<label for="FormData_City"><abbr class="rq" title="Obligatoire">*</abbr>            Ville : </label>		<input class="" id="FormData_City" name="FormData.City" type="text" value="" /> 
-			<input type="submit" class="sbt button" value="Valider">
+			<!--<input type="submit" class="sbt button" value="Valider">-->
 			<?php
+			echo '<input type="submit" class="sbt button" value="Valider" id="form_bt_val">';
+			echo "<script>$('#form_bt_val').click( function() { 
+								validElement(elem, id);
+							});
+							</script>";
 			if(!isset($session))
 			{
 			?>	
