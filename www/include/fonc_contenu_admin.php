@@ -262,7 +262,7 @@
 									<th style="width: 180px;" >libelle</th>
 									<th style="width: 60px;" >Date creation</th>
 									<th style="width: 60px;">
-										<div class="i_toolbaradmin tool_add" onclick=> 
+										<div class="i_toolbaradmin tool_add" onclick="get_data_admin(\'new_type_client\')" > 
 											<i class="fa fa-plus-circle"></i>
 										</div>
 									</th>
@@ -328,58 +328,7 @@
 	function createAccountForm()
 	{
 		?>
-<style>
-	.createAccountForm
-	{
-		width: 100%;
-		height: 100%;
-	}
-	.createAccountForm label
-	{
-		display: block;
-		clear: both;
-		float: left;
-		padding: .7em .85em;
-		text-align: center;
-		width: 33%;
-		white-space: nowrap;
-	}
-	.createAccountForm select
-	{
-		margin-top: 1%
-	}
-	.createAccountForm input
-	{
-		
-		background: #fafafa;
-		border: 1px solid #ced6e0;
-		border-radius: 3px;
-		color: #3c5a80;
-		float: left;
-		margin-top: .85em;
-		padding: .7em .85em;
-		width: 50%;
-	}
-	.sbt 
-	{
-		clear: both !important; 
-		float: none !important;
-		padding: .9em 1em !important;
-		width: auto !important;
-		margin-bottom: 2% !important;
-		margin-left: 81% !important;
-	}
-	
-	.createAccountForm p
-	{
-		text-align: center;
-	}
-	label.error
-	{
-		color: red!important;
-		margin-left: 31%;
-	}
-</style>
+
 <div class="createAccountForm">
 		<form action="" id="createAccountForm" method="post" name="createAccountForm">
 			
@@ -405,26 +354,45 @@
 		?>	
 			
 			
-			<label for="createAccountForm_Gender"><abbr class="rq" title=Obligatoire>*</abbr>            Civilit&#233; :</label>        
+			<label for="createAccountForm_Gender"><abbr class="rq" title=Obligatoire>*</abbr>Civilit&#233; :</label>        
 			<select class="" id="createAccountForm_Gender" name="createAccountForm.Gender"><option value="Mr">Monsieur</option>
 				<option value="Mrs">Madame</option>
 				<option value="Ms">Mademoiselle</option>
 			</select>
-			<label for="createAccountForm_Name"><abbr class="rq" title="Obligatoire">*</abbr>            Nom :</label>		<input class="" id="createAccountForm_Name" name="createAccountForm.Name" type="text" value="" />  
-			<label for="createAccountForm_FirstName"><abbr class="rq" title="Obligatoire">*</abbr>            Pr&#233;nom :</label>        <input class="" id="createAccountForm_FirstName" name="createAccountForm.FirstName" type="text" value="" />
-			<label for="createAccountForm_Email"><abbr class="rq" title="Obligatoire">*</abbr>Email :</label>            <input class="" id="createAccountForm_Email" name="createAccountForm.Email" type="text" value="" />            
-			<label for="createAccountForm_Password"><abbr class="rq" title="Obligatoire">*</abbr>Mot de passe :</label>            <input class="" id="createAccountForm_Password" maxlength="15" name="createAccountForm.Password" type="password" />
-			<label for="createAccountForm_ConfirmePassword"><abbr class="rq" title="Obligatoire">*</abbr>Confirmation du mot de passe :</label>            <input class="" id="createAccountForm_ConfirmePassword" maxlength="15" name="createAccountForm.ConfirmePassword" type="password" />
-			<label for="createAccountForm_BirthDate"><abbr class="rq" title="Obligatoire">*</abbr>            Date de naissance :<span class="tip">(jj/mm/aaaa)</span></label>		<input class="" id="createAccountForm_BirthDate" name="createAccountForm.BirthDate" type="text" value="" />        
-			<label for="createAccountForm_Mobile"><abbr class="rq" title="Obligatoire">*</abbr>            T&#233;l&#233;phone mobile :</label>	<input class="" id="createAccountForm_Mobile" name="createAccountForm.Mobile" type="text" value="" />  
-			<label for="createAccountForm_Tel"><abbr class="rq" title="Obligatoire">*</abbr>            T&#233;l&#233;phone fixe :</label>		<input class="" id="createAccountForm_Tel" name="createAccountForm.Tel" type="text" value="" />
-			<label for="createAccountForm_NumAndStreet"><abbr class="rq" title="Obligatoire">*</abbr>            Num&#233;ro et nom de rue :</label>		<input class="" id="createAccountForm_NumAndStreet" name="createAccountForm.NumAndStreet" type="text" value="" />
-			<label for="FormData_Building">            B&#226;timent : </label>		<input class="" id="FormData_Building" name="FormData.Building" type="text" value="" />
-			<label for="FormData_Appt">            Appartement :</label>		<input class="" id="FormData_Appartment" name="FormData.Appartment" type="text" value="" />
-			<label for="FormData_BpLocality">            BP/Lieu dit :</label>		<input class="" id="FormData_Locality" name="FormData.Locality" type="text" value="" /> 
-			<label for="FormData_AddrComplement">            Compl&#233;ment d&#39;adresse :<span class="tip">(digicode, etc.)</span></label>		<input class="" id="FormData_AddrComplement" name="FormData.AddrComplement" type="text" value="" /> 
-			<label for="FormData_PostalCode"><abbr class="rq" title="Obligatoire">*</abbr>            Code postal : <span class="tip">(ex. 33600)</span></label>		<input class="" id="FormData_PostalCode" name="FormData.PostalCode" type="text" value="" />
-			<label for="FormData_City"><abbr class="rq" title="Obligatoire">*</abbr>            Ville : </label>		<input class="" id="FormData_City" name="FormData.City" type="text" value="" /> 
+			<label for="createAccountForm_Name"><abbr class="rq" title="Obligatoire">*</abbr>            Nom :</label>		
+			<input class="" id="createAccountForm_Name" name="createAccountForm.Name" type="text" value="" />  
+			<label for="createAccountForm_FirstName"><abbr class="rq" title="Obligatoire">*</abbr>            Pr&#233;nom :</label>        
+			<input class="" id="createAccountForm_FirstName" name="createAccountForm.FirstName" type="text" value="" />
+			<label for="createAccountForm_Email"><abbr class="rq" title="Obligatoire">*</abbr>Email :</label>            
+			<input class="" id="createAccountForm_Email" name="createAccountForm.Email" type="text" value="" />            
+			<label for="createAccountForm_Password"><abbr class="rq" title="Obligatoire">*</abbr>Mot de passe :</label>            
+			<input class="" id="createAccountForm_Password" maxlength="15" name="createAccountForm.Password" type="password" />
+			<label for="createAccountForm_ConfirmePassword"><abbr class="rq" title="Obligatoire">*</abbr>Confirmation du mot de passe :</label>            
+			<input class="" id="createAccountForm_ConfirmePassword" maxlength="15" name="createAccountForm.ConfirmePassword" type="password" />
+			<label for="createAccountForm_BirthDate">
+				<abbr class="rq" title="Obligatoire">*</abbr>Date de naissance :<span class="tip">(jj/mm/aaaa)</span>
+			</label>		
+			<input class="" id="createAccountForm_BirthDate" name="createAccountForm.BirthDate" type="text" value="" />        
+			<label for="createAccountForm_Mobile"><abbr class="rq" title="Obligatoire">*</abbr>            T&#233;l&#233;phone mobile :</label>	
+			<input class="" id="createAccountForm_Mobile" name="createAccountForm.Mobile" type="text" value="" />  
+			<label for="createAccountForm_Tel"><abbr class="rq" title="Obligatoire">*</abbr>            T&#233;l&#233;phone fixe :</label>		
+			<input class="" id="createAccountForm_Tel" name="createAccountForm.Tel" type="text" value="" />
+			<label for="createAccountForm_NumAndStreet"><abbr class="rq" title="Obligatoire">*</abbr>            Num&#233;ro et nom de rue :</label>		
+			<input class="" id="createAccountForm_NumAndStreet" name="createAccountForm.NumAndStreet" type="text" value="" />
+			<label for="FormData_Building">            B&#226;timent : </label>		
+			<input class="" id="FormData_Building" name="FormData.Building" type="text" value="" />
+			<label for="FormData_Appt">            Appartement :</label>		
+			<input class="" id="FormData_Appartment" name="FormData.Appartment" type="text" value="" />
+			<label for="FormData_BpLocality">            BP/Lieu dit :</label>		
+			<input class="" id="FormData_Locality" name="FormData.Locality" type="text" value="" /> 
+			<label for="FormData_AddrComplement">Compl&#233;ment d&#39;adresse :<span class="tip">(digicode, etc.)</span></label>		
+			<input class="" id="FormData_AddrComplement" name="FormData.AddrComplement" type="text" value="" /> 
+			<label for="FormData_PostalCode">
+				<abbr class="rq" title="Obligatoire">*</abbr>Code postal : <span class="tip">(ex. 33600)</span>
+			</label>		
+			<input class="" id="FormData_PostalCode" name="FormData.PostalCode" type="text" value="" />
+			<label for="FormData_City"><abbr class="rq" title="Obligatoire">*</abbr>            Ville : </label>		
+			<input class="" id="FormData_City" name="FormData.City" type="text" value="" /> 
 			<!--<input type="submit" class="sbt button" value="Valider">-->
 			<?php
 			echo '<input type="submit" class="sbt button" value="Valider" id="form_bt_val">';
@@ -443,8 +411,8 @@
 		</form>
 </div>
 <script>
-$.validator.setDefaults({
-		 errorElement: "div",
+	$.validator.setDefaults({
+		errorElement: "div",
 		submitHandler: function() { alert("submitted!"); }
 	});
 
@@ -519,31 +487,22 @@ $.validator.setDefaults({
 	}
 	
 	////////////////: créer un nouveau type de client
-	function createClientTypeForm()
-	{
-	?>
-		<style>
-			.sbt 
-		{
-			clear: both !important; 
-			float: none !important;
-			padding: .9em 1em !important;
-			width: auto !important;
-			margin-bottom: 2% !important;
-			margin-left: 81% !important;
-		}
-		</style>
-		<div class="createClientTypeForm">		
-			<label style="font-size: 20px;font-weight: bold;">Veuillez ajouter ci-dessous le libélé du nouveau type de client</label>
-			<form action="" method="POST" id="createClientTypeForm" name="createClientTypeForm" style="padding-top:25px">
-				<label for="createClientTypeForm_label">Libellé : </label>			<input id="createClientTypeForm_label" name="createClientTypeForm.label" type="text">
-				<input type="submit" class="sbt button" value="Valider" id="form_bt_val">
-				<script>$('#form_bt_val').click( function() { 
-								validElement(elem, id);
+	function create_client_type_form(){
+		$html = '';
+
+		$html .= '<div class="createClientTypeForm">		
+					<label style="font-size: 20px;font-weight: bold;">Veuillez ajouter ci-dessous le libélé du nouveau type de client</label>
+					<form action="" method="POST" id="form_create_type_client" name="createClientTypeForm" style="padding-top:25px">
+						<label for="createClientTypeForm_label">Libellé : </label>			
+						<input id="createClientTypeForm_label" name="createClientTypeForm.label" type="text">
+						<input type="submit" class="sbt button" value="Valider" id="form_bt_val">
+						<script>
+							$("#form_bt_val").click( function() { 
+								saveElement("create_type_client", 0);
 							});
-				</script>
-			</form>
-		</div>
-	
-	<?php
+						</script>
+					</form>
+				</div>';
+		
+		return $html;
 	}

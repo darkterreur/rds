@@ -71,22 +71,22 @@
 		$html .='<div class="nav_wrapper">
 						<ul id="nav">
 							<li>
-								<a href="#accueil" class="jq_nav" lib="accu">
+								<a href="#!accueil" class="jq_nav" lib="accu">
 									<strong>Accueil</strong>
 								</a>
 							</li>
 							<li>
-								<a href="#bien_etre" class="jq_nav" lib="bien">
+								<a href="#!bien_etre" class="jq_nav" lib="bien">
 									<strong>Bien être</strong>
 								</a>
 							</li>
 							<li>
-								<a href="#coaching" class="jq_nav" lib="coac">
+								<a href="#!coaching" class="jq_nav" lib="coac">
 									<strong>Coaching en image</strong>
 								</a>
 							</li>
 							<li>
-								<a href="#developpement" class="jq_nav" lib="dev">
+								<a href="#!developpement" class="jq_nav" lib="dev">
 									<strong>Développement Personnel</strong>
 								</a>
 							</li>

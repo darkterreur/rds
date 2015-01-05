@@ -31,6 +31,9 @@
 			$html = gestion_type_client();
 			break;
 			
+		case 'new_type_client':
+			$html = create_client_type_form();
+			break;	
 			
 			
 		case 'delete':
