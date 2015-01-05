@@ -19,6 +19,8 @@
    				
    					echo get_header(); 
    					echo get_container(); 
+					//createAccountForm();
+					//createClientTypeForm();
    					echo '<div>'.get_footer().'</div>'; 			
 					//echo onglet();
 					//echo menuAdmin();
