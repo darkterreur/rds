@@ -113,9 +113,12 @@ function validElement(elem, id){
 	});
 }
 
+//fonction de sauvegarde de formulaire
+//elem est pour l'id du formulaire
+//le id est dans le cas d'une modification on met a 0 si c'est un nouveau
 function saveElement(elem, id){
 	console.log('validElement('+elem+', '+id+')');
-	//il faut que je rajoute elem et id a dataform
+	//il faut que je rajoute elem et id a dataform ainsi que le context pour le switch
 	var dataForm = $('#form_'+elem).serializeArray();
 	
 	
