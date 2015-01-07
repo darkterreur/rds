@@ -5,7 +5,7 @@
 
 //Function administrateur
 function get_data_admin(elem){
-	//console.log('je suis dedans');
+	console.log('get_data_admin');
 	var dataForm = 'ctxt='+elem;
 
 	$.ajax({
@@ -117,10 +117,20 @@ function validElement(elem, id){
 //elem est pour l'id du formulaire
 //le id est dans le cas d'une modification on met a 0 si c'est un nouveau
 function saveElement(elem, id){
-	console.log('validElement('+elem+', '+id+')');
-	//il faut que je rajoute elem et id a dataform ainsi que le context pour le switch
-	var dataForm = $('#form_'+elem).serializeArray();
+	console.log('saveElement('+elem+', '+id+')');
 	
+	
+	console
+	//il faut que je rajoute elem et id a dataform ainsi que le context pour le switch
+	/*
+var dataForm = $('#form_'+elem).serializeArray();
+	
+	console.log('saveElement ->');
+	console.log(dataForm);
+*/
+	
+	/*
+
 	
 	$.ajax({
 		type: "POST",
@@ -140,6 +150,7 @@ function saveElement(elem, id){
 		console.log(Data);
 	});
 	
+*/
 	
 	
 	

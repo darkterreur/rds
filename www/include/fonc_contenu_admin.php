@@ -397,7 +397,8 @@
 			<?php
 			echo '<input type="submit" class="sbt button" value="Valider" id="form_bt_val">';
 			echo "<script>$('#form_bt_val').click( function() { 
-								validElement(elem, id);
+								console.log('toto dans la chambre');
+								//validElement(elem, id);
 							});
 							</script>";
 			if(!isset($session))
@@ -497,8 +498,9 @@
 						<input id="createClientTypeForm_label" name="createClientTypeForm.label" type="text">
 						<input type="submit" class="sbt button" value="Valider" id="form_bt_val">
 						<script>
-							$("#form_bt_val").click( function() { 
-								saveElement("create_type_client", 0);
+							$("#form_bt_val").click( function() {
+								console.log("je suis la"); 
+								//saveElement("create_type_client", 0);
 							});
 						</script>
 					</form>

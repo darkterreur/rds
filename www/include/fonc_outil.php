@@ -61,6 +61,35 @@
 	}
 
 
+/*!GN 2014-10-28 2eme version de fonction button avec array
+$a_opt = array(	'id' => ''
+				,'fct_js' => ''
+				,'value'  => ''
+				,'class'  => ''
+				;'style'  => ''					
+			);*/
+function get_input_btn($a_opt){
+	$html = '';
+	$js = '';
+	$style = '';
+
+	if( isset($a_opt['style']) ){
+		$style = ' style="'.$a_opt['style'].'" ';
+	}
+
+	$html .= '<button id="'.$a_opt['id'].'" type="button" class="'.$a_opt['class'].'" name="'.$a_opt['id'].'" '.$style.'>'.$a_opt['value'].'</button>';
+	$js .= '$("#'.$a_opt['id'].'").click( function() { 
+				'.$a_opt['fct_js'].';
+			});
+			';
+
+	$html .= '<script>
+					'.$js.'
+				</script>';
+	 
+	
+	return $html;
+}
 
 
 //***************************************//
