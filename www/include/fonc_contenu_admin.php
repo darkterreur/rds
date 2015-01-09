@@ -491,18 +491,21 @@
 	function create_client_type_form(){
 		$html = '';
 
+
+		$a_opt = array(	'id' => 'form_bt_val'
+				,'fct_js' => 'console.log("je suis la"); saveElement("create_type_client", 0);'
+				,'value'  => 'Valider'
+				,'class'  => 'sbt button'
+				,'style'  => ''					
+			);
+		
+
 		$html .= '<div class="createClientTypeForm">		
 					<label style="font-size: 20px;font-weight: bold;">Veuillez ajouter ci-dessous le libélé du nouveau type de client</label>
 					<form action="" method="POST" id="form_create_type_client" name="createClientTypeForm" style="padding-top:25px">
 						<label for="createClientTypeForm_label">Libellé : </label>			
 						<input id="createClientTypeForm_label" name="createClientTypeForm.label" type="text">
-						<input type="submit" class="sbt button" value="Valider" id="form_bt_val">
-						<script>
-							$("#form_bt_val").click( function() {
-								console.log("je suis la"); 
-								//saveElement("create_type_client", 0);
-							});
-						</script>
+						'.get_input_btn($a_opt).'
 					</form>
 				</div>';
 		

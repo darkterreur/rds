@@ -122,12 +122,20 @@ function saveElement(elem, id){
 	
 	console
 	//il faut que je rajoute elem et id a dataform ainsi que le context pour le switch
-	/*
-var dataForm = $('#form_'+elem).serializeArray();
+	var dataForm = $('#form_'+elem).serializeArray();
+	//dataForm.push({'elem':elem,'id':id});
+	dataForm.push({'name': 'elem' ,'value' : elem ,'name' : 'id' ,'value':id});
+	
+	
+	var a = [];
+	a.push(12);
+	a.push(32);
+	
+	console.log(a);
+	
 	
 	console.log('saveElement ->');
 	console.log(dataForm);
-*/
 	
 	/*
 
@@ -135,7 +143,7 @@ var dataForm = $('#form_'+elem).serializeArray();
 	$.ajax({
 		type: "POST",
 		processData: true,
-		url: './ajax/ajx_data_admin.php',
+		url: './ajax/ajx_save_elem.php',
 		data: dataForm,
 		dataType: 'json'
 	})
