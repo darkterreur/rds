@@ -120,19 +120,19 @@ function saveElement(elem, id){
 	console.log('saveElement('+elem+', '+id+')');
 	
 	
-	console
+	
+	var dataForm = {'elem'			: elem
+					,'id'   		: id
+					,'serialize'	: []
+				};
+	
+	
+	
 	//il faut que je rajoute elem et id a dataform ainsi que le context pour le switch
-	var dataForm = $('#form_'+elem).serializeArray();
-	//dataForm.push({'elem':elem,'id':id});
-	dataForm.push({'name': 'elem' ,'value' : elem ,'name' : 'id' ,'value':id});
+	var aForm = $('#form_'+elem).serializeArray();
 	
-	
-	var a = [];
-	a.push(12);
-	a.push(32);
-	
-	console.log(a);
-	
+	dataForm.serialize.push(aForm);
+		
 	
 	console.log('saveElement ->');
 	console.log(dataForm);

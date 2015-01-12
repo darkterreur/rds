@@ -25,15 +25,21 @@
 			$html = valid_comm();
 			break;
 		case 'gestion_client':
-			//$html = get_login();
+			$html = gestion_client();
 			break;
 		case 'gestion_type_client':
 			$html = gestion_type_client();
 			break;
 			
+		
 		case 'new_type_client':
 			$html = create_client_type_form();
+			break;
+			
+		case 'new_client':
+			$html = create_account_form();
 			break;	
+
 			
 			
 		case 'delete':
