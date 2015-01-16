@@ -139,7 +139,7 @@
 	height: 100%;
 }
 
-.createAccountForm label{
+#createAccountForm label{
 	display: block;
 	clear: both;
 	float: left;
@@ -149,11 +149,11 @@
 	white-space: nowrap;
 }
 
-.createAccountForm select{
+#createAccountForm select{
 	margin-top: 1%
 }
 
-.createAccountForm input{
+#createAccountForm input{
 	
 	background: #fafafa;
 	border: 1px solid #ced6e0;
@@ -174,7 +174,7 @@
 	margin-left: 81% !important;
 }
 
-.createAccountForm p{
+#createAccountForm p{
 	text-align: center;
 }
 
