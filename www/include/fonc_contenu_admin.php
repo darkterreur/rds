@@ -245,12 +245,19 @@
 	function gestion_type_client(){
 		$html = '';
 		
+		$a_opt = array(	'id' => 'btn_return'
+						,'fct_js' => 'get_data_admin(\'menu_admin\')'
+						,'value'  => 'Return'
+						,'class'  => 'button'
+						,'style'  => 'margin-left: 6px;'					
+					);
+		
 		$html .= '	<div class="bloc_global">
 						<div id="titre_body">
 							<font style="font-size:2.5em; margin-left:2.45%">Gérer types de clients</font>
 						</div>
 						<div class="btn_return">
-							<div class="button" style="margin-left: 6px;" onclick="get_data_admin(\'menu_admin\')">Return</div>	
+							'.get_input_btn($a_opt).'
 						</div>
 						
 						
@@ -321,15 +328,101 @@
 	}
 	
 	
+	function gestion_client(){
+		$html = '';
+		
+		$a_opt = array(	'id' => 'btn_return'
+						,'fct_js' => 'get_data_admin(\'menu_admin\')'
+						,'value'  => 'Return'
+						,'class'  => 'button'
+						,'style'  => 'margin-left: 6px;'					
+					);
+		
+		$html .= '	<div class="bloc_global">
+						<div id="titre_body">
+							<font style="font-size:2.5em; margin-left:2.45%">Gérer les clients</font>
+						</div>
+						<div class="btn_return">
+							'.get_input_btn($a_opt).'
+						</div>
+						
+						
+						
+						<table id="listeTpcl" cellpadding="0" cellspacing="0" border="0" class="display">
+							<thead>
+								<tr>
+									<th style="width: 20px;" >Id</th>
+									<th style="width: 180px;" >Nom</th>
+									<th style="width: 60px;" >Prenom</th>
+									<th style="width: 60px;">
+										<div class="i_toolbaradmin tool_add" onclick="get_data_admin(\'new_client\')" > 
+											<i class="fa fa-plus-circle"></i>
+										</div>
+									</th>
+								</tr>
+							</thead>
+							<tbody class="tableau">';
+							
+
+				
+		$sql = 'SELECT * FROM `client` WHERE `sta_cli` = 2 ';
+		
+		$a_res = connexion::select($sql);
+		
+		//$html .= '<pre>'.print_r($a_res).'</pre>';
+		//print_r($a_res);
+		
+		if(!empty($a_res)){
+		
+			foreach($a_res as $key => $value){
+				$html .= "	<tr>	
+								<td >".$value['id_cli']."</td>
+								<td >".$value['nom_cli']."</td>
+								<td >".$value['prenom_cli']."</td>
+								<td class='modify_user'>
+									<div align='center' >	
+										<div class='i_toolbaradmin' onclick=\" \"> 
+											<i class='fa fa-pencil i_hover'></i>
+										</div>
+										<div class='i_toolbaradmin' onclick=' deleteElement('client',".$value['id_cli']."); '> 
+											<i class='fa fa-times i_hover'></i>
+										</div>
+									</div>
+								</td>	
+						</tr>";	
+
+			}
+		}
+		
+		
+		$html .= '		</tbody>
+					</table>
+				</div>';
+				
+		$html .= '<script>
+					var table = $("#listeTpcl").dataTable({
+									"aoColumnDefs": [
+								      	{ "bSearchable": false, "aTargets": [ 3 ] }
+									  	,{ "bSortable": false, "aTargets": [ 3 ] }
+								    ]
+								});				
+				</script>
+
+				';
+		
+		return $html;
+	}
+
+	
 	///////////////////// formulaire ///////////////////////////////
 	
 	
 	/////////////////////////: formulaire de creation de compte utilisateur
-	function createAccountForm()
+	function create_account_form()
 	{
 		?>
 
-<div class="createAccountForm">
+<div class="bloc_global">
 		<form action="" id="createAccountForm" method="post" name="createAccountForm">
 			
 		<?php
@@ -397,7 +490,8 @@
 			<?php
 			echo '<input type="buttom" class="sbt button" value="Valider" id="form_bt_val">';
 			echo "<script>$('#form_bt_val').click( function() { 
-								validElement(elem, id);
+								console.log('toto dans la chambre');
+								//validElement(elem, id);
 							});
 							</script>";
 			if(isset($session))
@@ -489,20 +583,25 @@
 	////////////////: créer un nouveau type de client
 	function create_client_type_form(){
 		$html = '';
-?>
-		<div class="createClientTypeForm">		
+
+
+
+		$a_opt = array(	'id' => 'form_bt_val'
+				,'fct_js' => 'console.log("je suis la"); saveElement("create_type_client", 0);'
+				,'value'  => 'Valider'
+				,'class'  => 'sbt button'
+				,'style'  => ''					
+			);
+		
+
+		$html .= '<div class="bloc_global">		
+
 					<label style="font-size: 20px;font-weight: bold;">Veuillez ajouter ci-dessous le libélé du nouveau type de client</label>
 					<form action="" method="POST" id="form_create_type_client" name="createClientTypeForm" style="padding-top:25px">
 						<label for="createClientTypeForm_label">Libellé : </label>			
 						<input id="createClientTypeForm_label" name="createClientTypeForm.label" type="text">
-						<input type="button" class="sbt button" value="Valider" id="form_bt_val">
-						<script>
-							$("#form_bt_val").click( function() { 
-								saveElement("create_type_client", 0);
-							});
-						</script>
-					</form>
-				</div>
-		<?php
-		//return $html;
+
+						'.get_input_btn($a_opt).'</form></div>';
+		
+		return $html;
 	}

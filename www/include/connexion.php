@@ -189,20 +189,10 @@ const HOST = "renaissanceds.mysql.db";
         }
         
         public function pdo_sql_nbRow($sql) {
-            
-            $nb_lignes = 0;
-			
-			if (self::hasErrors()) return $nb_lignes;			
-			
-			$query = self::getConnection()->prepare($query);
-			
-			if (!$query->execute()) return $nb_lignes;
-			
-			$nb_lignes = $query->rowCount();
-			
-			return $nb_lignes;
-            
-            
-           
+            global $dbh;
+            $sth = $dbh->prepare($sql);
+            $sth->execute();
+            $result = $sth->rowCount();
+            return $result;
         }
 	}

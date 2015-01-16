@@ -5,7 +5,7 @@
 
 //Function administrateur
 function get_data_admin(elem){
-	//console.log('je suis dedans');
+	console.log('get_data_admin');
 	var dataForm = 'ctxt='+elem;
 
 	$.ajax({
@@ -117,29 +117,50 @@ function validElement(elem, id){
 //elem est pour l'id du formulaire
 //le id est dans le cas d'une modification on met a 0 si c'est un nouveau
 function saveElement(elem, id){
-	console.log('validElement('+elem+', '+id+')');
-	//il faut que je rajoute elem et id a dataform ainsi que le context pour le switch
-	var dataForm = $('#form_'+elem).serializeArray();
+	console.log('saveElement('+elem+', '+id+')');
 	
-//	
-//	$.ajax({
-//		type: "POST",
-//		processData: true,
-//		url: './ajax/ajx_data_admin.php',
-//		data: dataForm,
-//		dataType: 'json'
-//	})
-//	.done(function( Data ) {
-//		
-//		console.log('succes save element');
-//		console.log(Data);
-//				
-//	})
-//	.fail(function(Data) {
-//		console.log("erreur save element -> "+elem);
-//		console.log(Data);
-//	});
-//	
+	
+	
+	var dataForm = {'elem'			: elem
+					,'id'   		: id
+					,'serialize'	: []
+				};
+	
+	
+	
+	//il faut que je rajoute elem et id a dataform ainsi que le context pour le switch
+	var aForm = $('#form_'+elem).serializeArray();
+	
+	dataForm.serialize.push(aForm);
+		
+	
+
+	console.log('saveElement ->');
+	console.log(dataForm);
+	
+	/*
+
+	
+	$.ajax({
+		type: "POST",
+		processData: true,
+		url: './ajax/ajx_save_elem.php',
+		data: dataForm,
+		dataType: 'json'
+	})
+	.done(function( Data ) {
+		
+		console.log('succes save element');
+		console.log(Data);
+				
+	})
+	.fail(function(Data) {
+		console.log("erreur save element -> "+elem);
+		console.log(Data);
+	});
+	
+*/
+
 	
 	
 	
