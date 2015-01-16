@@ -333,9 +333,9 @@
 		<form action="" id="createAccountForm" method="post" name="createAccountForm">
 			
 		<?php
-			if(isset($session))
+			if(!isset($session))
 			{
-				//$rq = Connexion::select('SELECT `libelle_tpcl` FROM `type_cli` WHERE 1 limit 100');
+				$rq = Connexion::select('SELECT `libelle_tpcl` FROM `type_cli` WHERE 1 limit 100');
 				
 		?>	
 	
@@ -395,12 +395,12 @@
 			<input class="" id="FormData_City" name="FormData.City" type="text" value="" /> 
 			<!--<input type="submit" class="sbt button" value="Valider">-->
 			<?php
-			echo '<input type="submit" class="sbt button" value="Valider" id="form_bt_val">';
+			echo '<input type="buttom" class="sbt button" value="Valider" id="form_bt_val">';
 			echo "<script>$('#form_bt_val').click( function() { 
 								validElement(elem, id);
 							});
 							</script>";
-			if(!isset($session))
+			if(isset($session))
 			{
 			?>	
 			<p class="tip">En cliquant sur Choisir ou Valider, j’accepte les <a href="" title="Voir les CGV ">Conditions Générales </a> </p>
@@ -489,20 +489,20 @@
 	////////////////: créer un nouveau type de client
 	function create_client_type_form(){
 		$html = '';
-
-		$html .= '<div class="createClientTypeForm">		
+?>
+		<div class="createClientTypeForm">		
 					<label style="font-size: 20px;font-weight: bold;">Veuillez ajouter ci-dessous le libélé du nouveau type de client</label>
 					<form action="" method="POST" id="form_create_type_client" name="createClientTypeForm" style="padding-top:25px">
 						<label for="createClientTypeForm_label">Libellé : </label>			
 						<input id="createClientTypeForm_label" name="createClientTypeForm.label" type="text">
-						<input type="submit" class="sbt button" value="Valider" id="form_bt_val">
+						<input type="button" class="sbt button" value="Valider" id="form_bt_val">
 						<script>
 							$("#form_bt_val").click( function() { 
 								saveElement("create_type_client", 0);
 							});
 						</script>
 					</form>
-				</div>';
-		
-		return $html;
+				</div>
+		<?php
+		//return $html;
 	}

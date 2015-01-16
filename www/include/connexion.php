@@ -4,7 +4,7 @@
 		const HOST = "localhost";
 		const BASE_DE_DONNEE = "renaissanceds";
 		const USERNAME = "root";
-		const PASSWORD = "root"; 
+		const PASSWORD = ""; 
 		
 		//ovh
 		/*
