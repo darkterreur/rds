@@ -423,7 +423,8 @@
 		?>
 
 <div class="bloc_global">
-		<form action="" id="createAccountForm" method="post" name="createAccountForm">
+	<div class="createAccountForm">
+		<form action="" class="createAccountForm" method="post" name="createAccountForm">
 			
 		<?php
 			if(!isset($session))
@@ -435,9 +436,13 @@
 			<label for="createAccountForm_TypeClient"><abbr class="rq" title=Obligatoire>*</abbr>            Type Client :</label> 
 			<select class="" id="createAccountForm_TypeClient" name="createAccountForm.TypeClient">
 				<?php 
-				foreach($rq as $key => $value)
+				foreach($rq as $key => $array_value)
 				{
-				echo "<option value='".$value."'>".$value."</option>"; 	
+					foreach($array_value as $key1 => $value1)
+					{
+				echo "<option value='".$value1."'>".$value1."</option>"; 	
+				
+					}
 				}
 				?>
 				
@@ -503,6 +508,7 @@
 			}
 			?>
 		</form>
+	</div>
 </div>
 <script>
 	$.validator.setDefaults({
